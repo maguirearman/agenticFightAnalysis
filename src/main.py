@@ -1,28 +1,44 @@
-from data_collection.scraper import UFCStatsScraper
-from agent import MMAAnalysisAgent
+# src/main.py
+
+from data_collection.data_processor import FightDataProcessor
+from analysis.mma_agent import MMAAnalysisAgent
+import json
 
 def main():
-    # Initialize scraper and agent
-    scraper = UFCStatsScraper()
+    # Initialize components
+    processor = FightDataProcessor()
     agent = MMAAnalysisAgent()
     
-    # Example: Get data from a recent fight
-    fight_url = "http://ufcstats.com/fight-details/7a0705378548744f"  # Example UFC fight
+    # Load event data
+    with open('event_data.json', 'r') as f:
+        event_data = json.load(f)
     
-    print("Fetching fight data...")
-    fight_data = scraper.get_fight_stats(fight_url)
+    # Process all fights
+    processed_fights = processor.process_fight_data(event_data)
     
-    if fight_data:
-        print("\nFight Data Retrieved:")
-        print(f"Fighter 1: {fight_data['fighter1']['name']}")
-        print(f"Fighter 2: {fight_data['fighter2']['name']}")
+    print(f"Found {len(processed_fights)} fights to analyze.")
+    
+    # Let user choose which fight to analyze
+    for i, fight in enumerate(processed_fights):
+        print(f"\n{i+1}. {fight['fighter1']['name']} vs {fight['fighter2']['name']}")
+    
+    fight_choice = int(input("\nWhich fight would you like to analyze? (Enter number): ")) - 1
+    
+    if 0 <= fight_choice < len(processed_fights):
+        selected_fight = processed_fights[fight_choice]
         
-        print("\nAnalyzing fight...")
-        analysis = agent.analyze_fight(fight_data)
+        print(f"\nAnalyzing: {selected_fight['fighter1']['name']} vs {selected_fight['fighter2']['name']}")
+        print(f"Weight Class: {selected_fight['weight_class']}")
+        
+        # Get analysis
+        analysis = agent.analyze_fight(selected_fight)
+        
         print("\nAnalysis Results:")
-        print(analysis)
+        print("================")
+        print(analysis['output'])
+        
     else:
-        print("Failed to retrieve fight data")
+        print("Invalid fight selection.")
 
 if __name__ == "__main__":
     main()

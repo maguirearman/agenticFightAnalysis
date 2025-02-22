@@ -1,3 +1,4 @@
-from .scraper import UFCStatsScraper
+# src/data_collection/__init__.py
+from .data_processor import FightDataProcessor
 
-__all__ = ['UFCStatsScraper']
+__all__ = ['FightDataProcessor']

@@ -1,0 +1,50 @@
+[
+    {
+      "matchup": [
+        "Gregory Rodrigues",
+        "Jared Cannonier"
+      ],
+      "tale_of_the_tape": {
+        "Stance": {
+          "Gregory Rodrigues": "Orthodox",
+          "Jared Cannonier": "Switch"
+        },
+        "Strikes Absorbed per Min. (SApM)": {
+          "Gregory Rodrigues": "4.69",
+          "Jared Cannonier": "4.39"
+        },
+        "Strikes Landed per Min. (SLpM)": {
+          "Gregory Rodrigues": "5.52",
+          "Jared Cannonier": "4.49"
+        },
+        "Striking Accuracy": {
+          "Gregory Rodrigues": "56%",
+          "Jared Cannonier": "50%"
+        },
+        "Submission Average/15 min.": {
+          "Gregory Rodrigues": "0.4",
+          "Jared Cannonier": "0.0"
+        },
+        "Takedown Accuracy": {
+          "Gregory Rodrigues": "41%",
+          "Jared Cannonier": "46%"
+        },
+        "Takedown Defense": {
+          "Gregory Rodrigues": "100%",
+          "Jared Cannonier": "62%"
+        },
+        "Takedowns Average/15 min.": {
+          "Gregory Rodrigues": "2.74",
+          "Jared Cannonier": "0.42"
+        },
+        "Weight": {
+          "Gregory Rodrigues": "185 lbs.",
+          "Jared Cannonier": "185 lbs."
+        },
+        "Wins/Losses/Draws": {
+          "Gregory Rodrigues": "16-5-0",
+          "Jared Cannonier": "17-8-0"
+        }
+      }
+    }
+  ]
