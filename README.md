@@ -1,8 +1,8 @@
 # MMA Fight Analysis Agent Project Summary
 
-You've built an intelligent agent-based system that analyzes MMA fights using real fighter data. Here's a breakdown of what you've accomplished and the tech stack you're using:
+I've built an intelligent agent-based system that analyzes MMA fights using real fighter data. Here's a breakdown of what you've accomplished and the tech stack you're using:
 
-## What You've Built
+## What I've Built
 
 1. **Data Processing System**
    - Created a data processor that takes raw MMA fight statistics and transforms them into a structured format
