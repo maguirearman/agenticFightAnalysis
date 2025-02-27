@@ -23,7 +23,7 @@ I've built an intelligent agent-based system that analyzes MMA fights using real
 
 ### Core Technologies:
 - **Python**: The primary programming language used throughout the project
-- **LangChain**: Framework for creating AI agent workflows with reasoning capabilities
+- **LangChain**: Framework for creating AI agent workflows with reasoning capabilities - Great for chaining LLM Operations (sequential steps)
 - **Ollama**: Local LLM deployment system to run AI models on your machine
 - **Mistral LLM**: An open-source large language model that powers the analysis
 
